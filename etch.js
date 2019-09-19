@@ -1,4 +1,18 @@
 // Add Event Listeners here:
+'use strict';
+
+function clickGrid() {
+  $('body').on('click', function (event) {
+    if ($(event.target).hasClass('cell')) {
+      $(event.target).addClass('active');
+    }
+    if ($(event.target).is('button')) {
+      console.log('yes!');
+      $('.active').removeClass('active');
+    }
+  });
+}
+$(clickGrid);
 
 
 // When DOM is ready:
@@ -7,10 +21,6 @@ $(() => {
 
   // Bind your event listeners here:
 });
-
-
-
-
 
 
 
