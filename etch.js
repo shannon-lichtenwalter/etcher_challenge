@@ -2,7 +2,7 @@
 'use strict';
 
 function clickGrid() {
-  $('body').on('click', function (event) {
+  $('body').mouseover(function (event) {
     if ($(event.target).hasClass('cell')) {
       $(event.target).addClass('active');
     }
